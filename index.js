@@ -145,7 +145,7 @@ function  QuickReply(senderID)
 												        "content_type":"web_url",
 												        "title":"Register",
 												        "payload":"Request_Register",
-												         "url":"https://bophyo.herokuapp.com/register_user/"+sender_psid
+												         "url":"https://createmenu.herokuapp.com/register_user/"+sender_psid
 												        }
 												    ]
 												  }
@@ -289,7 +289,7 @@ app.post('/webhook', (req, res) => {
                             if(userList.empty)
                             {
                      
-                           requestify.post('https://bophyo.herokuapp.com/RegisterQuickReply', {
+                           requestify.post('https://createmenu.herokuapp.com/RegisterQuickReply', {
 							userInput: userInput || null,
 							senderID: senderID,
 							image: userMedia
@@ -298,7 +298,7 @@ app.post('/webhook', (req, res) => {
                             }
                             else
                             {
-                            requestify.post('https://bophyo.herokuapp.com/user', {
+                            requestify.post('https://createmenu.herokuapp.com/user', {
 							userInput: userInput|| null,
 							senderID: senderID
 							})
@@ -308,7 +308,7 @@ app.post('/webhook', (req, res) => {
 					}
 					else
 					{
-						requestify.post('https://bophyo.herokuapp.com/advisor', {
+						requestify.post('https://createmenu.herokuapp.com/advisor', {
 							userInput: userInput|| null,
 							senderID: senderID,
 							video: userMedia
@@ -317,7 +317,7 @@ app.post('/webhook', (req, res) => {
 				})
 			}else{
                         
-						requestify.post('https://bophyo.herokuapp.com/admin', {
+						requestify.post('https://createmenu.herokuapp.com/admin', {
 							userInput: userInput || null,
 							senderID: senderID,
 							image: userMedia
