@@ -142,10 +142,9 @@ function  QuickReply(senderID)
 												    "text": "Please Register:",
 												    "quick_replies":[
 												      {
-												        "content_type":"web_url",
+												        "content_type":"text",
 												        "title":"Register",
 												        "payload":"Request_Register",
-												         "url":"https://createmenu.herokuapp.com/register_user/"+sender_psid
 												        }
 												    ]
 												  }
