@@ -163,7 +163,8 @@ app.post('/admin', (req, res) => {
     textMessage(senderID,'Welcome Admin')
   }
 
-   requestify.post('https://graph.facebook.com/v2.6/me/messenger_profile?access_token='+PAGE_ACCESS_TOKEN,
+   requestify.post('https://graph.facebook.com/v6.0/me/custom_user_settings?psid='+senderID+'&access_token='+PAGE_ACCESS_TOKEN,
+
 {
 	"persistent_menu":[
 			{
@@ -173,7 +174,7 @@ app.post('/admin', (req, res) => {
 				{
 					"type":"postback",
 					"title":"Before Regi",
-					"payload":"Hit"
+					"payload":"Hit1"
 
 				},
 				{
@@ -204,7 +205,7 @@ app.post('/RegisterQuickReply', (req, res) => {
   if(userInput == 'Hi'){
    QuickReply(senderID);
 
-   requestify.post('https://graph.facebook.com/v2.6/me/messenger_profile?access_token='+PAGE_ACCESS_TOKEN,
+   requestify.post('https://graph.facebook.com/v6.0/me/custom_user_settings?psid='+senderID+'&access_token='+PAGE_ACCESS_TOKEN,
 {
 	"persistent_menu":[
 			{
